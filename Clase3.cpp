@@ -4,20 +4,24 @@
 #include <cmath>
 //declaracion
 //main function
+void print_even (int nmin, int nmax); //declaro la funcion print even para que me imprima los pares que estan desde un parametro nmin hasta un parametro nmax
 int main(void) //void obliga a la funcion a retornar un entero
 {
-  const int m = 1, n = 100; //Estamos pidiendo que nos reseren el espacio para un entero en la memoria (4 bytes)
-  std::cout << "m: " << m << "\n";
-  std::cout << "n: " << n << "\n";
+  const int m = 1, n = 15; //Estamos pidiendo que nos reserven el espacio para un entero en la memoria (4 bytes)
+  print_even (m,n); //llamo a la funcion main
   
-  for (int ii = m ; ii <= n ; ii = ii+1){
+   return 0;
+}
+
+void print_even (int nmin, int nmax) //implementacion
+{
+    for (int ii = nmin ; ii <= nmax ; ii = ii+1){
     //si el número es par entonces imprimir
     if (ii%2 == 0){
-      std::cout << ii << "\n";
-    } 
-
-  }
+      std::cout << ii << " ";
+    }
   
-  
-  return 0;
+}
+    std::cout << "\n";
+    
 }
